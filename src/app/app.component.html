@@ -1,0 +1,60 @@
+
+<!-- Pre define Attribute Directive -->
+<h2 [ngStyle]="{'background-color': 'red'}">
+  This is a Atribute Directive, and adding the BG color red
+</h2>
+
+
+<!-- Custom Attribute Directive -->
+<h2>
+  <appHighlightText>
+      This is a Atribute Directive, and adding the BG color Green
+  </appHighlightText>
+</h2>
+
+<h2 hello>
+  This is a Atribute Directive, and adding the BG color Green
+</h2>
+
+
+<!-- Through renderer -->
+<h2 appRendererHighlight>
+  This is a Atribute Directive, and adding the BG color Blue
+</h2>
+
+
+<!-- Through @Input() -->
+<h2 appRendererHighlight [defaultColor]="'purple'" [highlightColor]="'orange'">
+  This is a Atribute Directive, and adding the BG color Blue
+</h2>
+
+
+
+
+<!-- Structural Directive -->
+<h2>Structural Directive</h2>
+<button (click)="isAvailable = !isAvailable">Toggle Condition</button>
+
+<div *ngIf="isAvailable">
+  Show this Div when isAvailable is true
+</div>
+
+<ng-template [ngIf]="isAvailable">
+  <div>
+    Show this Div when isAvailable is true
+  </div>
+</ng-template>
+
+<div *appAlternateIf="isAvailable">
+  The condition enables with custom Directive
+</div>
+
+
+<h2>ngSwitch Directive with Input value</h2>
+<input type="text" (change)='getValue($event)'>
+<div [ngSwitch]="value">
+  <span *ngSwitchCase="10">value is 10</span>
+  <span *ngSwitchCase="15">value is 15</span>
+  <span *ngSwitchDefault>Value is Default</span>
+</div>
+
