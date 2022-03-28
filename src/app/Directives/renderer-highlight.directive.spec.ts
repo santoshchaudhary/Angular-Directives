@@ -1,8 +1,8 @@
-import { RenderHighlightDirective } from './render-highlight.directive';
+import { RendererHighlightDirective } from './renderer-highlight.directive';
 
-describe('RenderHighlightDirective', () => {
+describe('RendererHighlightDirective', () => {
   it('should create an instance', () => {
-    const directive = new RenderHighlightDirective();
+    const directive = new RendererHighlightDirective();
     expect(directive).toBeTruthy();
   });
 });
